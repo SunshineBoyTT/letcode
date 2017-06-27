@@ -7,6 +7,11 @@ import java.util.Scanner;
  * @author Administrator
  *
  */
+/**
+ * 解题思路:知识预热:第一个Integer.numberOfLeadingZeros(num)计算二进制的num左边0个数。第二个作用是.假如左边还有0,说明接下来的x这项是0.
+ * 
+ *
+ */
 public class OutBinary {
 
 	 public static void main(String[] args) {  

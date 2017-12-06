@@ -1,14 +1,17 @@
 package cn.letcode;
 
 public class TwoSum {
-
+	public static final int EVEN=0;//代表偶数
+	public static final int ODD=1;//代表偶数
 	public static void main(String[] args) {
+		
 		// TODO Auto-generated method stub
-		int[] array={1,2, 7,8, 11, 15};
-		int[]  result=twoSum(array, 26);
-		for (int i : result) {
-			System.out.println(i);
-		}
+//		int[] array={1,2, 7,8, 11, 15};
+//		int[]  result=twoSum(array, 26);
+//		for (int i : result) {
+//			System.out.println(i);
+//		}
+		System.out.println(~EVEN==ODD);
 	}
 
 	public static int[] twoSum(int[] nums, int target) {

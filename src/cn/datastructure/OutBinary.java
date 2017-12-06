@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class OutBinary {
 
 	 public static void main(String[] args) {  
-		 System.out.println(toBinaryString(1));
+		 System.out.println(toBinaryString(9));
 	 }  
 	 
 	 public static String toBinaryString(int num) {

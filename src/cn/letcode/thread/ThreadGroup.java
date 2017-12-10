@@ -65,7 +65,6 @@ class ThreadGroup implements Runnable{
                 //无论是否是偶数，打印成功一个后，偶数的起始位置都要后移
                 evenPoint++;
             }else {
-            	if(oddPoint==records.length) break;
                 //打印奇数
                 if (records[oddPoint]%2==1) {
                     i++;

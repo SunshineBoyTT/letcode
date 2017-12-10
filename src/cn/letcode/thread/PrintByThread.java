@@ -26,20 +26,20 @@ public class PrintByThread {
     public static void main(String[] args) {
         try {
             //创建一个包含10000数字的输入文件
-            PrintWriter pw=new PrintWriter(new FileWriter(new File("input.txt")),true);
-            Random random=new Random();
-            for (int i = 0; i < 10000; i++) {
-                pw.print(Math.abs(random.nextInt())%100+",");
-            }
-            pw.flush();
-            pw.close();
+//            PrintWriter pw=new PrintWriter(new FileWriter(new File("input.txt")),true);
+//            Random random=new Random();
+//            for (int i = 0; i < 10000; i++) {
+//                pw.print(Math.abs(random.nextInt())%100+",");
+//            }
+//            pw.flush();
+//            pw.close();
             //读取文件中的数字，分5次读取，每次读取2000个
             BufferedReader reader=new BufferedReader(new FileReader("input.txt"));
             String str=reader.readLine();
             reader.close();
             String[] strs=str.split(",");//将一行字符串全部解析为10000个数字
             int j=0;//10000个数的索引计数
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 1; i++) {
                 int records[]=new int[2000];
                 for (int k = 0; k < 2000; k++) {
                     records[k]=Integer.parseInt(strs[j]);

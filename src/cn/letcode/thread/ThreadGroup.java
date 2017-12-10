@@ -11,7 +11,7 @@ class ThreadGroup implements Runnable{
     //所有的ThreadGroup类对象共享一个锁，用于count变量的同步，任何一个线程需要修改count变量，必须取得该锁
     private static Object lock=new Object();
     public static final int EVEN=0;//代表偶数
-    public static final int ODD=1;//代表奇数
+    public static final int ODD=-1;//代表奇数
      
     //*********以上静态变量，属于整个类所有***********
     private int type;
@@ -36,6 +36,7 @@ class ThreadGroup implements Runnable{
         for(int i=0;i<10;){
             //如果奇数和偶数都打印完成以后，就直接停止打印循环，等待该线程自己结束
             if (oddPoint>=records.length&&evenPoint>=records.length) {
+            	System.out.println("oddPoint"+oddPoint+"evenPoint"+evenPoint);
                 notifyAll();
                 return false;
             }
@@ -64,7 +65,7 @@ class ThreadGroup implements Runnable{
                 //无论是否是偶数，打印成功一个后，偶数的起始位置都要后移
                 evenPoint++;
             }else {
-            	if(oddPoint>=2000) System.err.println("越位"+oddPoint);
+            	if(oddPoint==records.length) break;
                 //打印奇数
                 if (records[oddPoint]%2==1) {
                     i++;

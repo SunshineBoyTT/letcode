@@ -24,7 +24,7 @@ import com.mysql.jdbc.Driver;
  * 池的访问.客户程序可以调用getInstance()方法访问本类的唯一实例.
  */
 public class ConnectPool {
-	static public ConnectPool instance; // 唯一实例
+	static private ConnectPool instance; // 唯一实例
 	static public int clients;
 	public Vector drivers = new Vector(); // 驱动
 	public PrintWriter log;
@@ -429,6 +429,10 @@ public class ConnectPool {
 				return null;
 			}
 			return con;
+		}
+
+		public Vector getFreeConnections() {
+			return freeConnections;
 		}
 	}
 }

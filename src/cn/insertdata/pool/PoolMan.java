@@ -15,7 +15,7 @@ package cn.insertdata.pool;
 import java.sql.*;
 import java.util.*;
 
-public class PoolMan extends ConnectPool {
+public class PoolMan {
 
 	private ConnectPool connMgr;
 	private Statement stmt;

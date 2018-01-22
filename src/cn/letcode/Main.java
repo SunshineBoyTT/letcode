@@ -8,7 +8,7 @@ class Main {
     public static void main(String[] args) {
         int A[] = { 1, 2, 3, 5, 7, 8, 9 };
         // int A[] = { 1, 5, 7, 8, 9, 6, 3, 11, 20, 17 };
-        func(A);
+//        func(A);
     }
 
     static void func(int A[]) {

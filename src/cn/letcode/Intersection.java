@@ -3,6 +3,12 @@
  */
 package cn.letcode;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Random;
+
 /**
  * @Description:
  * @author zhengjuntao@hjtechcn.cn
@@ -12,8 +18,20 @@ package cn.letcode;
  */
 public class Intersection {
 	
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) throws Exception {
+		createNumber(10000);
 	}
 	
+	public static void createNumber(int length) throws Exception{
+		StringBuffer stringBuffer=new StringBuffer();
+		Random random=new Random();
+		File file=new File("c://output1.txt");
+		FileWriter writer=new FileWriter(file);
+		for (int i = 0; i < length; i++) {
+			stringBuffer.append(random.nextInt(100)+" ");
+		}
+		writer.write(stringBuffer.toString());
+		writer.flush();
+		writer.close();
+	}
 }
